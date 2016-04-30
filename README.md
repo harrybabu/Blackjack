@@ -1,2 +1,2 @@
 # Blackjack
-A simple Blackjack game using React
+Blackjack game using React

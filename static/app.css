@@ -1,0 +1,169 @@
+body{ background: #000;}
+/* COMMON CSS */
+.centerParent{ position: relative; }
+.centerElement { position: absolute; left: 50%; top: 50%; transform: translate(-50%,-50%);}
+.show_effect{ transform: translate3d(0px, 0px, 0px); }
+
+/* Home page progress bar */
+.progress { margin-top: 0.625em; background-color: #000;border: 1px solid #fff; }
+.progress-bar { background-color: #fff; }
+
+/* Parent container and background and image */
+.playContainer { background: url('./background.jpg') no-repeat scroll left top rgba(0,0,0,0); height: 100vh; width: 100%; background-size: 100% 100%; max-width: 460px;margin: 0 auto;position: relative;}
+
+.msgContainer { margin: 0 auto; background-image: url('../panels_379x159.png'); height: 90px; width: 200px; animation: msgAnim;}
+
+/* Game over message conatiner */
+.msgBox { background-image: url('../panels_379x159.png'); position: absolute; left: 50%; top: 50%; z-index: 99999; height: 88px; width: 200px; margin-left: -100px;margin-top: -120px;}
+
+.blackJack{ background-position: -200px 2px; animation: winAnim;}
+.dealerBust { background-position: -400px 2px; animation: winAnim;}
+.playerBust { background-position: -600px 2px; animation: winAnim;}
+.playerWon { background-position: -400px 87px; animation: winAnim;}
+.dealerWon { background-position: -200px 87px; animation: winAnim;}
+
+/* Player score Info conatiner */
+.playerInfo, .dealerInfo { background-image: url('../panels_379x159.png'); width: 20%; height: 85px; position: absolute; right: 0; bottom: 250px;animation: playerAnim;}
+.playButton { background-position: -800px -82px;}
+.dealButton {background-position: -400px -82px;}
+.playerScore, .dealerScore { background-image: url('../panels_379x159.png'); background-position: -800px -520px; height: 70px;}
+.playerWonBg, .dealerWonBg  { background-position: 0px -99px;height: 70px;}
+.dealerText { text-align: center; color: #fff; margin-left: 1em; margin-top: 0.344em; float: left; font-size: 22px; font-weight: bold;}
+.dealerInfo { top: 69px;}
+
+/* Chips container */
+
+.chipsContainer{ position: absolute; bottom: 41px; left: 0;margin-left: 0.344em;}
+.actionSprite{ background: url('./buttons_131x133.png') no-repeat scroll left top rgba(0,0,0,0);}
+.commonSprite{ background: url('./chips_133x133.png') no-repeat scroll left top rgba(0,0,0,0);}
+
+.chipContainer{ position: relative; min-width: 79px; height:80px; float:left; animation: chipAnim;}
+.chipHolder { min-width: 79px; height: 80px; float: left; position:absolute;}
+
+.chip5{background-position: -1px -2px;}
+.chip5_show{ transform: translate3d(165%, -213%, 0px);}
+
+.chip10{ background-position: -88px -2px; margin-left: 18px;}
+.chip10_show{ transform: translate3d(60%, -213%, 0px);}
+
+.chip25{ background-position: -169px -2px;margin-left: 36px;}
+.chip25_show{ transform: translate3d(-43%, -211%, 0px); }
+
+.chip100{ background-position: -1px -85px;margin-left: 50px;}
+.chip100_show{ transform: translate3d(-147%, -211%, 0px);}
+
+.actionHolder{ min-width: 86px; height: 87px; float: left; position: absolute; }
+.hitButton{ background-position: -1px -95px;  margin-left: 93px;}
+.standButton{ background-position: -93px -95px;  margin-left: 193px;}
+
+/* Bet and Pocket related styles */
+.moneyContainer{ position: absolute; top: 94%; left: 45%; color: white; font-size: 26px; }
+.betInfo{ width: 10%; height: 10px; position: absolute; left: 15%; top: 72%; color: #ccc; font-size: 24px; }
+
+/* deck related style */
+.player { position: relative; top: 45%; transform: translateY(-81%); left: 25%; width: 210px; }
+.dealer { position: relative; top: 15%; left: 25%; width: 210px; transform: translateY(-54%);}
+
+/* Cards realted styles */
+.card-space { height: 150px; }
+.cards { background-image: url('./cards_128x173.png'); height: 107px; width: 82px; display: inline-block; margin: 0 15px 0 0; }
+.card-space :nth-child(1){ position: relative; left: 0;}
+.card-space :nth-child(2){ position: absolute; left: 20px;}
+.card-space :nth-child(3){ position: absolute; left: 40px;}
+.card-space :nth-child(4){ position: absolute; left: 60px;}
+.card-space :nth-child(5){ position: absolute; left: 80px;}
+
+.cards.c2 {background-position: 2px -947px; }
+.cards.c3 {background-position: -76px -947px; }
+.cards.c4 {background-position: -153px -947px; }
+.cards.c5 {background-position: -231px -947px; }
+.cards.c6 {background-position: -309px -947px; }
+.cards.c7 {background-position: -386px -947px; }
+.cards.c8 {background-position: -464px -947px; }
+.cards.c9 {background-position: -542px -947px; }
+.cards.c10 {background-position: -620px -947px; }
+.cards.cj {background-position: 2px -1052px; }
+.cards.cq {background-position: -76px -1052px; }
+.cards.ck {background-position: -153px -1052px; }
+.cards.ca {background-position: -620px -842px; }
+.cards.d2 {background-position: -309px -1052px; }
+.cards.d3 {background-position: -387px -1052px; }
+.cards.d4 {background-position: -465px -1052px; }
+.cards.d5 {background-position: -543px -1052px; }
+.cards.d6 {background-position: -621px -1052px; }
+.cards.d7 {background-position: 2px -1157px }
+.cards.d8 {background-position: -76px -1157px }
+.cards.d9 {background-position: -153px -1157px }
+.cards.d10 {background-position: -231px -1157px }
+.cards.dj {background-position: -309px -1157px }
+.cards.dq {background-position: -387px -1157px}
+.cards.dk {background-position: -465px -1157px }
+.cards.da {background-position: -231px -1052px; }
+.cards.h2 {background-position: -387px -737px }
+.cards.h3 {background-position: -465px -737px }
+.cards.h4 {background-position: -543px -737px }
+.cards.h5 {background-position: -621px -737px }
+.cards.h6 {background-position: 2px -842px; }
+.cards.h7 {background-position: -76px -842px; }
+.cards.h8 {background-position: -153px -842px; }
+.cards.h9 {background-position: -231px -842px; }
+.cards.h10 {background-position: -309px -842px; }
+.cards.hj {background-position: -387px -842px; }
+.cards.hq {background-position: -465px -842px; }
+.cards.hk {background-position: -543px -842px; }
+.cards.ha {background-position: -309px -737px; }
+.cards.s2 {background-position: -76px -632px; }
+.cards.s3 {background-position: -153px -632px; }
+.cards.s4 {background-position: -231px -632px; }
+.cards.s5 {background-position: -309px -632px; }
+.cards.s6 {background-position: -387px -632px; }
+.cards.s7 {background-position: -465px -632px; }
+.cards.s8 {background-position: -543px -632px; }
+.cards.s9 {background-position: -621px -632px; }
+.cards.s10 {background-position: 2px -737px; }
+.cards.sj {background-position: -76px -737px; }
+.cards.sq {background-position: -153px -737px; }
+.cards.sk {background-position: -231px -737px; }
+.cards.sa {background-position: 2px -632px; }
+
+/*IPhone 5*/
+@media (device-width: 320px) and (device-height: 568px) {
+  .chipContainer{top: 7px;min-width:75px;}
+  .chip5{right: -2px;}
+  .chip_cont span {margin-left:3px;}
+  .chip10{margin-left:1px;}
+  .chip25{margin-left:1px;}
+  .chip100{margin-left:1px;}
+  .playerInfo { width: 22%; bottom: 200px;}
+}
+/*IPhone 6*/
+@media (device-width: 375px) and (device-height: 667px) {
+  .chipContainer{ bottom: 8px;left: 6px;}
+  .chip10{margin-left:12px;}
+  .chip25{ margin-left:22px;}
+  .chip100{margin-left:29px;}
+  .playerInfo {width: 22%;bottom: 200px;}
+}
+
+@media (device-width: 360px) and (device-height: 640px) {
+  .chipContainer{top: 6px;}
+  .chip10{margin-left:12px;}
+  .chip25{margin-left:22px;}
+  .chip100{margin-left:29px;}
+  .playInfo {width: 22%;bottom: 200px;}
+}
+
+@media all and (min-width: 768px) {
+  .chipContainer{top: 2px;}
+  .chip5{margin-left: 10px;}
+  .chip10{margin-left:46px;}
+  .chip25{margin-left:82px;}
+  .chip100{margin-left:115px;}
+  .playInfo{width: 22%;bottom: 200px;}
+}
+/* Animation related styles */
+.chipAnimation {animation-duration: 1000ms;animation-fill-mode: forwards;animation-timing-function: cubic-bezier(0.4, 0, 0, 1.5);transition-duration: 500ms;transition-property: all;transition-timing-function: cubic-bezier(0.4, 0, 0, 1.5);}
+@-webkit-keyframes msgAnim { from {transform: translate3d(0px, 500px, 0px);} to {transform: translate3d(0px, 0px, 0px)} }
+@-webkit-keyframes winAnim { from {transform: translate3d(0px, -500px, 0px);} to {transform: translate3d(0px, 0px, 0px)} }
+@-webkit-keyframes chipAnim { from {transform: translate3d(0px, 300px, 0px);} to {transform: translate3d(0px, 0px, 0px)} }
+@-webkit-keyframes playerAnim { from {transform: translate3d(50px, 0px, 0px);} to {transform: translate3d(0px, 0px, 0px)}}
